@@ -10,7 +10,7 @@ console.log("");
 do {
   lowerBound = readlineSync.question("Lower bound: ");
   upperBound = readlineSync.question("Upper bound: ");
-} while (lowerBound >= upperBound || lowerBound < MIN || upperBound < MIN || lowerBound > MAX || upperBound > MAX);
+} while (lowerBound >= upperBound || lowerBound < MIN || upperBound < MIN || lowerBound > MAX || upperBound > MAX || Number.isNaN(upperBound) || Number.isNaN(lowerBound));
 
 lowerBound = 2 * Math.ceil(lowerBound / 2);
 upperBound = 2 * Math.floor(upperBound / 2);
