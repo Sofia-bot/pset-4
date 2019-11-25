@@ -7,8 +7,9 @@ let c;
 let a = 0;
 let b = 1;
 
+console.log("");
 while (n < MIN || n > MAX || Number.isNaN(n) || n % 1 != 0) {
-  n = Number(readlineSync.question("\nPositive integer: "));
+  n = Number(readlineSync.question("Positive integer: "));
 }
 
 for (let i = 2; i <= n; i++) {
@@ -17,4 +18,4 @@ for (let i = 2; i <= n; i++) {
   b = c;
 }
 c = c.toLocaleString("en");
-console.log("\n" + c + ".");
+console.log("\n" + c + ".\n");

@@ -6,9 +6,10 @@ let posNum = 0;
 let avg = 0;
 let numbers = 0;
 
-while (posNum >= MIN) {
+console.log("");
+while (posNum >= MIN || posNum % 1 != 0 || Number.isNaN(posNum)) {
   posNum = Number(readlineSync.question("Non-negative integer: "));
-  while (posNum >= MIN && posNum <= MAX) {
+  while (posNum >= MIN && posNum <= MAX && posNum % 1 == 0) {
     avg += posNum;
     numbers++;
     posNum = MAX + 1;
@@ -18,4 +19,4 @@ while (posNum >= MIN) {
 avg /= numbers;
 avg = avg.toLocaleString ("en", {minimumFractionDigits: 3, maximumFractionDigits: 3});
 
-console.log("\n" + avg + ".");
+console.log("\n" + avg + ".\n");

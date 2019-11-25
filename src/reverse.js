@@ -6,9 +6,10 @@ let integer;
 let num;
 let reverse = "";
 
+console.log("");
 do {
-  integer = readlineSync.question("\nPositive integer: ");
-} while (integer < MIN || integer > MAX);
+  integer = readlineSync.question("Positive integer: ");
+} while (integer < MIN || integer > MAX || Number.isNaN(integer) || integer % 1 != 0);
 
 do {
   num = integer % 10;
@@ -19,4 +20,4 @@ do {
 
 reverse += integer + ".";
 
-console.log("\n" + reverse);
+console.log("\n" + reverse + "\n");

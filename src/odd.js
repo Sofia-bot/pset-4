@@ -9,7 +9,7 @@ let sum = 0;
 console.log("");
 do {
   integer = readlineSync.question("Positive integer: ");
-} while (integer <= MIN || integer > MAX);
+} while (integer <= MIN || integer > MAX || integer % 1 != 0 || Number.isNaN(integer));
 
 do {
   num = integer % 10;
@@ -20,4 +20,4 @@ do {
   integer = integer / 10;
 } while (integer > 0);
 
-console.log("\n" + sum + ".");
+console.log("\n" + sum + ".\n");

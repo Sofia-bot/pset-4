@@ -19,4 +19,4 @@ let sum = (lowerBound + upperBound) / 2;
 sum *= n;
 sum = sum.toLocaleString("en");
 
-console.log("\n" + sum + ".");
+console.log("\n" + sum + ".\n");
